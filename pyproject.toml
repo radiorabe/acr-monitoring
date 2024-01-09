@@ -21,7 +21,7 @@ minio = "^7.1.17"
 [tool.poetry.group.dev.dependencies]
 black = "^23.9.1"
 pytest = "^7.4.2"
-pytest-ruff = "^0.1.1"
+pytest-ruff = "^0.2.1"
 pytest-cov = "^4.1.0"
 pytest-random-order = "^1.1.0"
 ruff = "^0.0.291"
