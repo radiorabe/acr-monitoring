@@ -1,6 +1,7 @@
 from io import BytesIO
 from unittest.mock import patch
 
+from freezegun import freeze_time
 from kafka.consumer.fetcher import ConsumerRecord
 from urllib3.response import HTTPResponse
 
@@ -44,6 +45,7 @@ def test_read_from_event(sender, mc, send_from_data):
 
 @patch("acrmonitor.ZabbixSender")
 @patch("acrmonitor.ZabbixMetric")
+@freeze_time("1970-01-01 16:20:00")
 def test_send_from_data(metric, sender):
     data = {
         "metadata": {
@@ -61,6 +63,6 @@ def test_send_from_data(metric, sender):
         host="zabbix.example.com",
         key="key.example.com",
         value="1234567890",
-        clock=11520.0,
+        clock=47520.0,
     )
     sender.send.assert_called_with([metric()])
