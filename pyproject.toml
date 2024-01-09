@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "acr-monitoring"
+version = "0.0.0"
+description = "listens to acr cloudevents and leverages the zabbix sender proto to send that timestamp of the last recognized track to zabbix so we can notice if there are gaps"
+authors = ["RaBe IT-Reaktion <it@rabe.ch>"]
+license = "AGPLv3"
+readme = "README.md"
+packages = [{include = "acrmonitor.py"}]
+
+[tool.poetry.scripts]
+acrmonitor = 'acrmonitor:main'
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cloudevents = "^1.10.0"
+ConfigArgParse = "^1.7"
+kafka-python = "^2.0.2"
+py-zabbix = "^1.1.7"
+minio = "^7.1.17"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+pytest = "^7.4.2"
+pytest-ruff = "^0.1.1"
+pytest-cov = "^4.1.0"
+pytest-random-order = "^1.1.0"
+ruff = "^0.0.291"
+isort = "^5.12.0"
+pytest-isort = "^3.1.0"
+mkdocs = "^1.5.3"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+minversion = "7.2"
+addopts = "-ra -q --random-order --doctest-glob='*.md' --doctest-modules --cov=acrmonitor --cov-fail-under=100 --ruff --isort --ignore=docs/"
+#filterwarnings = ["ignore::DeprecationWarning:pytest_freezegun"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
