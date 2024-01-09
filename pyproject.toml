@@ -12,22 +12,29 @@ acrmonitor = 'acrmonitor:main'
 
 [tool.poetry.dependencies]
 python = "^3.11"
-cloudevents = "^1.10.0"
+cloudevents = "^1.10.1"
 ConfigArgParse = "^1.7"
 kafka-python = "^2.0.2"
 py-zabbix = "^1.1.7"
-minio = "^7.1.17"
+minio = "^7.2.3"
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.9.1"
-pytest = "^7.4.2"
-pytest-ruff = "^0.1.1"
+black = "^23.12.1"
+pytest = "^7.4.4"
+pytest-ruff = "^0.2.1"
 pytest-cov = "^4.1.0"
 pytest-random-order = "^1.1.0"
-ruff = "^0.0.291"
-isort = "^5.12.0"
+ruff = "^0.1.11"
+isort = "^5.13.2"
 pytest-isort = "^3.1.0"
 mkdocs = "^1.5.3"
+freezegun = "^1.4.0"
+mkdocs-material = "^9.5.3"
+mkdocs-gen-files = "^0.5.0"
+mkdocs-literate-nav = "^0.6.1"
+mkdocs-section-index = "^0.3.8"
+mkdocs-autorefs = "^0.5.0"
+mkdocstrings = {extras = ["python"], version = "^0.24.0"}
 
 [tool.isort]
 profile = "black"
