@@ -10,11 +10,11 @@ on:
 
 jobs:
   release-container:
-    uses: radiorabe/actions/.github/workflows/release-container.yaml@v0.21.1
+    uses: radiorabe/actions/.github/workflows/release-container.yaml@v0.21.2
     with:
       image: ghcr.io/radiorabe/acrmonitoring
       name: acrmonitoring
       display-name: Analyse ACRCloud data dumps and generate events for Zabbix
       tags: minimal rhel9 ubi9 rabe minio kafka cloudevents acrcloud
   mkdocs:
-    uses: radiorabe/actions/.github/workflows/release-mkdocs.yaml@v0.21.1
+    uses: radiorabe/actions/.github/workflows/release-mkdocs.yaml@v0.21.2
