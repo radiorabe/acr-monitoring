@@ -19,7 +19,7 @@ py-zabbix = "^1.1.7"
 minio = "^7.2.15"
 
 [tool.poetry.group.dev.dependencies]
-black = "^24.10.0"
+black = "^25.1.0"
 pytest = "^8.3.4"
 pytest-ruff = "^0.4"
 pytest-cov = "^6.0.0"
