@@ -347,14 +347,14 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
 name = "cloudevents"
-version = "1.11.0"
+version = "1.12.0"
 description = "CloudEvents Python SDK"
 optional = false
 python-versions = "*"
 groups = ["main"]
 files = [
-    {file = "cloudevents-1.11.0-py3-none-any.whl", hash = "sha256:77edb4f2b01f405c44ea77120c3213418dbc63d8859f98e9e85de875502b8a76"},
-    {file = "cloudevents-1.11.0.tar.gz", hash = "sha256:5be990583e99f3b08af5a709460e20b25cb169270227957a20b47a6ec8635e66"},
+    {file = "cloudevents-1.12.0-py3-none-any.whl", hash = "sha256:49196267f5f963d87ae156f93fc0fa32f4af69485f2c8e62e0db8b0b4b8b8921"},
+    {file = "cloudevents-1.12.0.tar.gz", hash = "sha256:ebd5544ceb58c8378a0787b657a2ae895e929b80a82d6675cba63f0e8c5539e0"},
 ]
 
 [package.dependencies]
@@ -1436,4 +1436,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "4a96af0ebcd6ebe3abce4bd9b0de52ac03f751f36cc1248fb5540ddd870fe673"
+content-hash = "b56ba5425ab03efce3b817f9aed88c14fc8caac28bf8ca0dcbd5a6fda965054a"
