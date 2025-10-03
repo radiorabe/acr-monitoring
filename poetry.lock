@@ -742,14 +742,14 @@ files = [
 
 [[package]]
 name = "minio"
-version = "7.2.16"
+version = "7.2.18"
 description = "MinIO Python SDK for Amazon S3 Compatible Cloud Storage"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "minio-7.2.16-py3-none-any.whl", hash = "sha256:9288ab988ca57c181eb59a4c96187b293131418e28c164392186c2b89026b223"},
-    {file = "minio-7.2.16.tar.gz", hash = "sha256:81e365c8494d591d8204a63ee7596bfdf8a7d06ad1b1507d6b9c1664a95f299a"},
+    {file = "minio-7.2.18-py3-none-any.whl", hash = "sha256:f23a6edbff8d0bc4b5c1a61b2628a01c5a3342aefc613ff9c276012e6321108f"},
+    {file = "minio-7.2.18.tar.gz", hash = "sha256:173402a5716099159c5659f9de75be204ebe248557b9f1cc9cf45aa70e9d3024"},
 ]
 
 [package.dependencies]
@@ -1486,4 +1486,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "fa649a1eac758339c261cd36cef41572fa2bfce31ac9a2b12f78e9dfefc357a9"
+content-hash = "60bbb0c63524428c25534142da492d165d6447ec268bf0d12437465e76365f1b"
