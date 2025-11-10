@@ -39,10 +39,9 @@ mkdocstrings = {extras = ["python"], version = "^0.30.0"}
 [tool.isort]
 profile = "black"
 
-[tool.pytest.ini_options]
+[tool.pytest]
 minversion = "7.2"
-addopts = "-ra -q --random-order --doctest-glob='*.md' --doctest-modules --cov=acrmonitor --cov-fail-under=100 --ruff --isort --ignore=docs/"
-#filterwarnings = ["ignore::DeprecationWarning:pytest_freezegun"]
+addopts = ["-ra", "-q", "--random-order", "--doctest-glob='*.md'", "--doctest-modules", "--cov=acrmonitor", "--cov-fail-under=100", "--ruff", "--isort", "--ignore=docs/"]
 
 [build-system]
 requires = ["poetry-core"]
