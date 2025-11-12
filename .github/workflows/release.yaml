@@ -17,4 +17,4 @@ jobs:
       display-name: Analyse ACRCloud data dumps and generate events for Zabbix
       tags: minimal rhel9 ubi9 rabe minio kafka cloudevents acrcloud
   mkdocs:
-    uses: radiorabe/actions/.github/workflows/release-mkdocs.yaml@v0.37.0
+    uses: radiorabe/actions/.github/workflows/release-mkdocs.yaml@v0.38.0
