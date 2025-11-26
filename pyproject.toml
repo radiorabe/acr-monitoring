@@ -16,7 +16,7 @@ cloudevents = "^1.12.0"
 ConfigArgParse = "^1.7"
 kafka-python-ng = "^2.2.3"
 py-zabbix = "^1.1.7"
-minio = "^7.2.18"
+minio = "^7.2.19"
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.11.0"
