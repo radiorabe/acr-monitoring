@@ -1,5 +1,7 @@
+"""Tests for acrmonitor module."""
+
 from io import BytesIO
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 from freezegun import freeze_time
 from kafka.consumer.fetcher import ConsumerRecord
@@ -11,7 +13,12 @@ from acrmonitor import read_from_event, send_from_data
 @patch("acrmonitor.send_from_data")
 @patch("acrmonitor.Minio")
 @patch("acrmonitor.ZabbixSender")
-def test_read_from_event(sender, mc, send_from_data):
+def test_read_from_event(
+    sender: MagicMock,
+    mc: MagicMock,
+    send_from_data: MagicMock,
+) -> None:
+    """Test reading event from kafka and invoking send_from_data."""
     msg = ConsumerRecord(
         topic="topic",
         partition="partition",
@@ -46,12 +53,13 @@ def test_read_from_event(sender, mc, send_from_data):
 @patch("acrmonitor.ZabbixSender")
 @patch("acrmonitor.ZabbixMetric")
 @freeze_time("1970-01-01 16:20:00")
-def test_send_from_data(metric, sender):
+def test_send_from_data(metric: MagicMock, sender: MagicMock) -> None:
+    """Test conversion of timestamp and zabbix metric send call."""
     data = {
         "metadata": {
             "timestamp_utc": "1970-01-01 13:12:00",
             "acrid": "1234567890",
-        }
+        },
     }
     send_from_data(
         sender=sender,
