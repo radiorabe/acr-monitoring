@@ -8,3 +8,8 @@ on:
 jobs:
   test-python-poetry:
     uses: radiorabe/actions/.github/workflows/test-python-poetry.yaml@v0.43.1
+  github-actions:
+    permissions:
+      contents: read
+      security-events: write # so zizmor can publish results to the Security tab
+    uses: radiorabe/actions/.github/workflows/test-github-actions.yaml@f49d301c653f9aa0d99bec7b7f18f2d789e93fa7 # v0.43.4
