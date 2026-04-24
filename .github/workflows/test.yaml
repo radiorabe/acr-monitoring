@@ -7,7 +7,7 @@ on:
 
 jobs:
   test-python-poetry:
-    uses: radiorabe/actions/.github/workflows/test-python-poetry.yaml@v0.43.1
+    uses: radiorabe/actions/.github/workflows/test-python-poetry.yaml@f49d301c653f9aa0d99bec7b7f18f2d789e93fa7 # v0.43.4
   github-actions:
     permissions:
       contents: read
